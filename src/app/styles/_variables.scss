@@ -1,0 +1,6 @@
+// Material Theming
+$primary: mat-palette($mat-purple);
+$accent: mat-palette($mat-green);
+$warn: mat-palette($mat-red);
+
+$theme: mat-light-theme($primary, $accent, $warn);
