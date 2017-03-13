@@ -1,5 +1,6 @@
 {
   "projects": {
-    "production": "fundabitat-ng2"
+    "production": "hilarity-cards",
+    "default": "hilarity-cards"
   }
 }
