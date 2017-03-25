@@ -2,22 +2,20 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
-    "target": "es6",
+    "baseUrl": "src",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": [
-      "dom",
-      "es2016"
-    ],
-    "baseUrl": "src",
+    "target": "es6",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2016", "dom"],
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noUnusedLocal": true,
     "noUnusedParameters": true,
-    "strictNullChecks": true
+    "strictNullChecks": false
   }
 }
