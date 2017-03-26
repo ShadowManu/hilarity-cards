@@ -1,9 +1,19 @@
 // Material Theming
 @import 'app/styles/material';
+@import 'app/styles/variables';
+@import '~@angular/material/core/theming/all-theme';
 
 // Global Styles
 html, body {
   margin: 0;
   height: 100%;
   font-family: 'Roboto', sans-serif;
+  color: $white-87-opacity;
+  background-color: $background-color;
+}
+
+// Links reset
+a {
+  text-decoration: none;
+  color: map-get($primary, default);
 }

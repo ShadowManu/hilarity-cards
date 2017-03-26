@@ -1,0 +1,49 @@
+@mixin font($name) {
+  @if $name == display4 {
+    font-size: 112px;
+    font-weight: 300;
+  }
+  @else if $name == display3 {
+    font-size: 56px;
+    font-weight: 400;
+  }
+  @else if $name == display2 {
+    font-size: 45px;
+    font-weight: 400;
+  }
+  @else if $name == display {
+    font-size: 34px;
+    font-weight: 400;
+  }
+  @else if $name == headline {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  @else if $name == title {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  @else if $name == subheading {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  // CUSTOM SIZE FOR READIBILITY
+  @else if $name == body2 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  // CUSTOM SIZE FOR READIBILITy
+  @else if $name == body1 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  @else if $name == caption {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  @else if $name == button {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
