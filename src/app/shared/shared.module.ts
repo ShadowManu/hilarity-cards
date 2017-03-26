@@ -1,11 +1,21 @@
 import { NgModule } from '@angular/core';
+import { MaterialModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { NavbarComponent } from './navbar';
+
 @NgModule({
-  declarations: [],
+  declarations: [
+    NavbarComponent
+  ],
   imports: [
     BrowserModule,
+    MaterialModule,
+    FlexLayoutModule
   ],
-  exports: []
+  exports: [
+    NavbarComponent
+  ]
 })
 export class SharedModule { }

@@ -6,9 +6,4 @@ import { AuthService } from 'app/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-
-  constructor(private authSvc: AuthService) {}
-
-  login() { this.authSvc.login(); }
-}
+export class AppComponent {}
