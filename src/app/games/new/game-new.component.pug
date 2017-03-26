@@ -1,0 +1,9 @@
+doctype html
+form(fxLayout="column", fxLayoutAlign="start start", (ngSubmit)="onSubmit()")
+
+  // Title
+  md-input-container
+    input(mdInput, placeholder="Title", [formControl]="this.form.controls.title")
+
+  // Submit
+  button(md-raised-button, fxFlexAlign="center") Create
