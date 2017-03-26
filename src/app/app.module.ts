@@ -9,13 +9,13 @@ import { RouterModule } from '@angular/router';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 
 import { AppRoutingModule } from './app.routing';
+import { GamesModule } from './games';
 import { CoreModule } from './core';
 import { SharedModule } from './shared';
 
-import { AppComponent } from './app.component';
-
 import { environment } from '../environments/environment';
 
+import { AppComponent } from './app.component';
 import { HomeComponent } from './home';
 
 @NgModule({
@@ -35,6 +35,7 @@ import { HomeComponent } from './home';
     RouterModule,
 
     AppRoutingModule,
+    GamesModule,
     CoreModule,
     SharedModule
   ],
