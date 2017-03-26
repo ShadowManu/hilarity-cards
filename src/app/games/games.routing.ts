@@ -3,11 +3,15 @@ import { RouterModule } from '@angular/router';
 
 import { GamesComponent } from './games.component';
 
+import { GameIndexComponent } from './index/index';
+
 @NgModule({
   imports: [RouterModule.forChild([
+    { path: 'games', component: GamesComponent, children: [
 
-    { path: 'games', component: GamesComponent }
+      { path: '', component: GameIndexComponent }
 
+    ]}
   ])],
   exports: [RouterModule]
 })

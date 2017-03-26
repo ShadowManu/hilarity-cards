@@ -1,0 +1,11 @@
+.container(fxLayout="column", fxLayoutAlign="start stretch")
+  // No games
+  div(*ngIf="(games | async)?.length === 0", fxLayout="column", fxLayoutAlign="start center")
+    p There are no games running.
+    button(md-raised-button, color="primary") CREATE ONE
+
+  // Games list
+  md-card(*ngFor="let game of gamesObs | async")
+    md-card-title {{ game.id }} | {{ game.title }}
+    md-card-subtitle hostId: {{ game.hostId }}
+
