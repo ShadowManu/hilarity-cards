@@ -31,7 +31,7 @@ import { AuthComponent } from './auth';
     HttpModule,
 
     AngularFireModule.initializeApp(environment.firebase,
-      { provider: AuthProviders.Google, method: AuthMethods.Redirect }),
+      { provider: AuthProviders.Google, method: AuthMethods.Popup }),
     MaterialModule.forRoot(),
     FlexLayoutModule,
     RouterModule,
