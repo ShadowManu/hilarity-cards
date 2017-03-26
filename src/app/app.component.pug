@@ -1,8 +1,8 @@
 doctype html
 md-toolbar(color="primary")
   content(fxLayout="row", fxLayoutAlign="space-between center", fxFlexFill)
-    .right Hilarity Cards
+    .right(routerLink="/") Hilarity Cards
     .left
-      button(md-raised-button, routerLink="/login", color="accent") JOIN
+      button(md-raised-button, routerLink="/auth", color="accent") JOIN
 
 router-outlet
