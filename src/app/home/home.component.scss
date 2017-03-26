@@ -1,8 +1,10 @@
- @import '../styles/fonts';
+@import '../styles/fonts';
+
+.container { padding: 16px; }
 
 h1 {
   margin-bottom: 0;
-  @include font(display4);
+  @include font(display2);
 }
 .subheading {
   margin-top: 8px;
@@ -13,8 +15,9 @@ h1 {
 p { text-align: center; }
 
 .description, .status {
+  max-width: 600px;
   @include font(body1);
-  width: 600px;
+  text-align: justify;
 }
 
 button { margin-top: 20px; }
