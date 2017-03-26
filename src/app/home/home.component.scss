@@ -1,0 +1,20 @@
+ @import '../styles/fonts';
+
+h1 {
+  margin-bottom: 0;
+  @include font(display4);
+}
+.subheading {
+  margin-top: 8px;
+  @include font(headline);
+  font-style: italic;
+}
+
+p { text-align: center; }
+
+.description, .status {
+  @include font(body1);
+  width: 600px;
+}
+
+button { margin-top: 20px; }

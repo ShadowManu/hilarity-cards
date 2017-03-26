@@ -16,22 +16,24 @@ import { AppComponent } from './app.component';
 
 import { environment } from '../environments/environment';
 
-const AuthConfig = {
-  provider: AuthProviders.Google,
-  method: AuthMethods.Popup
-};
+import { HomeComponent } from './home';
+import { AuthComponent } from './auth';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
 
-    // AngularFireModule.initializeApp(environment.firebase, AuthConfig),
+    AngularFireModule.initializeApp(environment.firebase,
+      { provider: AuthProviders.Google, method: AuthMethods.Redirect }),
     MaterialModule.forRoot(),
+    FlexLayoutModule,
     RouterModule,
 
     AppRoutingModule,
