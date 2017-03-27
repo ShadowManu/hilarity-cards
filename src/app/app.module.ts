@@ -10,7 +10,6 @@ import { RouterModule } from '@angular/router';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 
 import { AppRoutingModule } from './app.routing';
-import { GamesModule } from './games';
 import { CoreModule } from './core';
 import { SharedModule } from './shared';
 
@@ -37,7 +36,6 @@ import { HomeComponent } from './home';
     RouterModule,
 
     AppRoutingModule,
-    GamesModule,
     CoreModule,
     SharedModule
   ],
