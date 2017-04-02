@@ -1,0 +1,14 @@
+[
+  {
+    "context": {
+      "git": {
+        "revisionId": "b673c021393e933d207a07d2fd18699315836474", 
+        "url": "git@github.com:ShadowManu/hilarity-cards"
+      }
+    }, 
+    "labels": {
+      "category": "remote_repo", 
+      "remote_name": "origin"
+    }
+  }
+]
