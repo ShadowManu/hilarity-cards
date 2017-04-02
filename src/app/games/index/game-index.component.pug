@@ -6,7 +6,7 @@ doctype html
     button(md-raised-button, color="primary", routerLink="/games/new") CREATE ONE
 
   // Games list
-  md-card(*ngFor="let game of games | async")
+  md-card(*ngFor="let game of games | async", [routerLink]="['/games', game.$key]")
     md-card-title {{ game.$key }} | {{ game.title }}
     md-card-subtitle hostId: {{ game.hostId }}
 

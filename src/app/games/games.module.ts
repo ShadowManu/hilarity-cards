@@ -10,13 +10,14 @@ import { SharedModule } from 'app/shared';
 import { GamesComponent } from './games.component';
 import { GameIndexComponent } from './index/index';
 import { GameNewComponent } from './new';
+import { GameShowComponent } from './show';
 
 @NgModule({
   declarations: [
     GamesComponent,
-
     GameIndexComponent,
     GameNewComponent,
+    GameShowComponent
   ],
   imports: [
     CommonModule,
