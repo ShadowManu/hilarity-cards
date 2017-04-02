@@ -5,7 +5,6 @@ require('@google-cloud/debug-agent').start({ allowExpressions: true });
 
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
-const firebase = require('firebase');
 const _ = require('lodash');
 
 // Realtime database admin configuration
@@ -37,7 +36,7 @@ function createRound(gameRef) {
 
 /** Chooses a random black card */
 function chooseBlackCard() {
-  let blackRef = firebase.database().ref('/cards/blacks');
+  let blackRef = admin.database().ref('/cards/blacks');
 
   return blackRef.once('value').then(snapshot => {
     let cards = _.values(snapshot.val());
