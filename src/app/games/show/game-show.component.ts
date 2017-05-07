@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute} from '@angular/router';
-import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
+import { ActivatedRoute } from '@angular/router';
+import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'hc-game-show',
@@ -11,12 +11,12 @@ export class GameShowComponent implements OnInit {
   gameObs: FirebaseObjectObservable<any>;
 
   constructor(
-    private fire: AngularFire,
+    private db: AngularFireDatabase,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     let key = this.route.snapshot.params.key;
-    this.gameObs = this.fire.database.object(`/games/${key}`);
+    this.gameObs = this.db.object(`/games/${key}`);
   }
 }

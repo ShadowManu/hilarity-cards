@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 import { Game } from 'app/core';
 
@@ -11,12 +11,9 @@ import { Game } from 'app/core';
 export class GameIndexComponent implements OnInit {
   games: FirebaseListObservable<Game[]>;
 
-  constructor(private fire: AngularFire) {}
+  constructor(private db: AngularFireDatabase) {}
 
   ngOnInit() {
-    this.games = this.fire.database.list('/games');
-
-    // DEBUG
-    this.games.subscribe(d => console.debug('games', d), e => console.debug('gamesError', e));
+    this.games = this.db.list('/games');
   }
 }

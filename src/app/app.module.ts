@@ -7,7 +7,9 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 
-import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AppRoutingModule } from './app.routing';
 import { CoreModule } from './core';
@@ -29,8 +31,10 @@ import { HomeComponent } from './home';
     FormsModule,
     HttpModule,
 
-    AngularFireModule.initializeApp(environment.firebase,
-      { provider: AuthProviders.Google, method: AuthMethods.Popup }),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+
     MaterialModule.forRoot(),
     FlexLayoutModule,
     RouterModule,

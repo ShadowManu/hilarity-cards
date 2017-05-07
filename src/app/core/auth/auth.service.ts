@@ -1,17 +1,25 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { AngularFireAuth } from 'angularfire2/auth';
 
-import { AngularFire } from 'angularfire2';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/of';
+
+import * as firebase from 'firebase/app';
+
+import { HandlerService, AppEvent as Ev } from '../handler';
 
 @Injectable()
 export class AuthService {
 
   constructor(
-    private fire: AngularFire,
+    private afAuth: AngularFireAuth,
+    private handler: HandlerService,
     private router: Router
   ) {}
 
   login() {
-    this.fire.auth.login().then(() => this.router.navigate(['/games']));
+    Observable.of(this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()))
+    .subscribe(this.handler.observer(Ev.A_AUTH_AUTHSVC_SIGNEDIN, Ev.E_AUTH_AUTHSVC_SIGNEDIN));
   }
 }
